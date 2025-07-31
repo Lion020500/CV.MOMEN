@@ -4,14 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kantor Kita</title>
+
+  <!-- SEO & indexing -->
+  <meta name="description" content="Website resmi kantor — profil, layanan, berita, kontak.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Theme & icons -->
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Website resmi kantor - profil, layanan, berita, kontak." />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-flex">
       <div class="logo">
-        <img src="assets/logo.png" alt="Logo Kantor" height="50" />
+        <img src="assets/logo.png" alt="Logo Kantor" height="50"/>
         <span class="brand">Kantor Kita</span>
       </div>
       <nav class="nav">
@@ -26,7 +39,7 @@
   </header>
 
   <section id="beranda" class="hero">
-    <div class="container">
+    <div class="container hero-content">
       <h1>Selamat Datang di Kantor Kami</h1>
       <p>Profesional, transparan, dan melayani dengan hati.</p>
       <a href="#layanan" class="btn">Lihat Layanan</a>
@@ -36,7 +49,8 @@
   <section id="tentang" class="section">
     <div class="container">
       <h2>Tentang Kami</h2>
-      <p>Kami adalah institusi yang berkomitmen memberikan layanan terbaik kepada masyarakat. Visi: ... Misi: ...</p>
+      <p>Kami adalah institusi yang berkomitmen memberikan layanan terbaik kepada masyarakat. 
+         Visi: Maju Bersama. Misi: Melayani dengan Sepenuh Hati.</p>
     </div>
   </section>
 
@@ -44,18 +58,9 @@
     <div class="container">
       <h2>Layanan Kami</h2>
       <div class="cards">
-        <div class="card">
-          <h3>Layanan 1</h3>
-          <p>Deskripsi singkat layanan pertama.</p>
-        </div>
-        <div class="card">
-          <h3>Layanan 2</h3>
-          <p>Deskripsi singkat layanan kedua.</p>
-        </div>
-        <div class="card">
-          <h3>Layanan 3</h3>
-          <p>Deskripsi singkat layanan ketiga.</p>
-        </div>
+        <div class="card"><h3>Layanan 1</h3><p>Deskripsi singkat layanan pertama.</p></div>
+        <div class="card"><h3>Layanan 2</h3><p>Deskripsi singkat layanan kedua.</p></div>
+        <div class="card"><h3>Layanan 3</h3><p>Deskripsi singkat layanan ketiga.</p></div>
       </div>
     </div>
   </section>
@@ -63,16 +68,16 @@
   <section id="berita" class="section">
     <div class="container">
       <h2>Berita & Pengumuman</h2>
-      <div class="news-list">
-        <article class="news-item">
+      <div class="cards">
+        <article class="card">
           <h4>Judul Berita 1</h4>
           <p class="meta">1 Agustus 2025</p>
           <p>Ringkasan singkat berita atau pengumuman terbaru dari kantor.</p>
         </article>
-        <article class="news-item">
+        <article class="card">
           <h4>Judul Berita 2</h4>
           <p class="meta">25 Juli 2025</p>
-          <p>Ringkasan singkat lain.</p>
+          <p>Ringkasan singkat berita lainnya.</p>
         </article>
       </div>
     </div>
@@ -84,13 +89,21 @@
       <p>Alamat: Jl. Contoh No. 123, Kota</p>
       <p>Telepon: (021) 1234567</p>
       <p>Email: info@kantorkita.id</p>
-      <div class="map-placeholder">
-        <!-- Nanti bisa embed Google Maps iframe di sini -->
-        <p>[Peta Lokasi]</p>
-      </div>
+      <div class="map-placeholder">[Peta Lokasi]</div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year
+      <p>&copy; <span id="year"></span> Kantor Kita. Semua hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
