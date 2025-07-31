@@ -4,14 +4,19 @@
   --card:#fff;
   --radius:10px;
   --shadow:0 4px 14px rgba(0,0,0,0.1);
-  --max:1200px;
+  --max:1200px; /* kembalikan ke 1200 */
   font-family: system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:#1f2937;line-height:1.6;}
 
-.container{width:90%;max-width:var(--max);margin:0 auto;padding:2rem 0;}
+.container {
+  width: 90%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
 
 /* Header */
 .site-header{
